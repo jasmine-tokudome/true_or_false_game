@@ -39,8 +39,6 @@ function putMark(row, col) {
         cell.classList.add("x");
         cells[row][col]=-1;
     }
-    }
-
 }
 
 // ゲームの状態を確認
