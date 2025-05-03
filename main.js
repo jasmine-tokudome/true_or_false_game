@@ -29,6 +29,17 @@ for (let row = 0; row < 3; row++) {
 
 // ○か×を置く
 function putMark(row, col) {
+    const cell = document.querySelector(`#cell_${row}_${col}`);
+    if (turn === 1){
+        cell.textContent = "◯";
+        cell.classList.add("o");
+        cells[row][col]=1;
+    }else{
+        cell.textContent = "X";
+        cell.classList.add("x");
+        cells[row][col]=-1;
+    }
+    }
 
 }
 
