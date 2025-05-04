@@ -50,5 +50,18 @@ function check() {
 
 // 勝敗を判定する処理
 function judge(_cells) {
-
+    //　調べる必要があるラインをリストアップ
+    const lines = [
+        // 横をチェック
+        [_cells[0][0], _cells[0][1], _cells[0][2]],
+        [_cells[1][0], _cells[1][1], _cells[1][2]],
+        [_cells[2][0], _cells[2][1], _cells[2][2]],
+        //　縦をチェック
+        [_cells[0][0], _cells[1][0], _cells[2][0]],
+        [_cells[0][1], _cells[1][1], _cells[2][1]],
+        [_cells[0][2], _cells[1][2], _cells[2][2]],
+        // 斜めをチェック
+        [_cells[0][0], _cells[1][1], _cells[2][2]],
+        [_cells[0][2], _cells[1][1], _cells[2][0]],
+    ]
 }
