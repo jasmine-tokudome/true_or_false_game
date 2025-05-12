@@ -95,3 +95,14 @@ function judge(_cells) {
         }
     }
 }
+
+// AIに考えてもらう
+function thinkAI(){
+    const hand = think(cells, -1, 5);
+    if (hand){
+    document.querySelector(`#cell_${hand[0]}_${hand[1]}`);
+    cell.textContent = " X ";
+    cell.classList.add("x");
+    cells[hand[0]][hand[1]] = -1;
+    }
+}
