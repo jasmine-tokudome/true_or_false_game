@@ -23,6 +23,8 @@ for (let row = 0; row < 3; row++) {
             if (cells[row][col] === 0){ // 置けるかどうかの判定
             putMark(row, col); // ○か×を置く
             turn = turn * -1;
+            thinkAI(); //AIに考えてもらう
+            turn = turn * -1;
             check(); // ゲームの状態を確認
             }
         });
