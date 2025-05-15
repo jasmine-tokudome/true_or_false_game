@@ -11,6 +11,7 @@ const cells = [ //空なら０、◯なら１、×なら-1
 ]
 let turn = 1; //◯の番なら１、×の番なら-1
 let result = CONTINUE;
+let mode = "hard";
 
 // セルをクリックしたときのイベントを登録
 for (let row = 0; row < 3; row++) {
