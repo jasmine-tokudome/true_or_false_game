@@ -32,6 +32,14 @@ for (let row = 0; row < 3; row++) {
     }
 }
 
+// モードが切り替わった時の処理
+const modeElements = document.querySelectorAll("input[name='mode']");
+for (let modelElement of modeElements){
+    modeElements.addEventListener("change",(event)=>{
+        mode = event.taeget.value;
+    });
+}
+
 // ○か×を置く
 function putMark(row, col) {
     const cell = document.querySelector(`#cell_${row}_${col}`);
