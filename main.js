@@ -34,8 +34,8 @@ for (let row = 0; row < 3; row++) {
 
 // モードが切り替わった時の処理
 const modeElements = document.querySelectorAll("input[name='mode']");
-for (let modelElement of modeElements){
-    modeElements.addEventListener("change",(event)=>{
+for (let modeElement of modeElements){
+    modeElement.addEventListener("change",(event)=>{
         mode = event.taeget.value;
     });
 }
@@ -111,9 +111,9 @@ function judge(_cells) {
 function thinkAI(){
     const hand = think(cells, -1, 9, mode === "easy");
     if (hand){
-    document.querySelector(`#cell_${hand[0]}_${hand[1]}`);
-    cell.textContent = " X ";
-    cell.classList.add("x");
-    cells[hand[0]][hand[1]] = -1;
+        const cell = document.querySelector(`#cell_${hand[0]}_${hand[1]}`);
+        cell.textContent = " X ";
+        cell.classList.add("x");
+        cells[hand[0]][hand[1]] = -1;
     }
 }
