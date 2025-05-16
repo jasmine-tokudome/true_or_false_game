@@ -109,7 +109,7 @@ function judge(_cells) {
 
 // AIに考えてもらう
 function thinkAI(){
-    const hand = think(cells, -1, 5);
+    const hand = think(cells, -1, 9, mode === "easy");
     if (hand){
     document.querySelector(`#cell_${hand[0]}_${hand[1]}`);
     cell.textContent = " X ";
