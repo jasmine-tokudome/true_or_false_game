@@ -105,6 +105,7 @@ function judge(_cells) {
             }
         }
     }
+    return DRAW_GAME;
 }
 
 // AIに考えてもらう
