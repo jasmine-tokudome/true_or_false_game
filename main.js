@@ -36,7 +36,8 @@ for (let row = 0; row < 3; row++) {
 const modeElements = document.querySelectorAll("input[name='mode']");
 for (let modeElement of modeElements){
     modeElement.addEventListener("change",(event)=>{
-        mode = event.taeget.value;
+        mode = event.target.value;
+        document.querySelector("#back").classList = mode;
     });
 }
 
