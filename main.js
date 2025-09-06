@@ -4,6 +4,14 @@ const WIN_PLAYER_1 = 1; // 〇の勝ち
 const WIN_PLAYER_2 = -1; // ✕の勝ち
 const DRAW_GAME = 0; // 引き分け
 
+const cells = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+]
+let turn = 1;
+let result = CONTINUE;
+
 // セルをクリックしたときのイベントを登録
 for (let row = 0; row < 3; row++) {
     for (let col = 0; col < 3; col++) {
