@@ -29,7 +29,16 @@ for (let row = 0; row < 3; row++) {
 
 // ○か×を置く
 function putMark(row, col) {
-
+    const cell = document.querySelector(`#cell_${row}_${col}`);
+    if (turn === 1){
+        cell.textContent = "o";
+        cell.classList.add("o");
+        cells[row] = 1;
+[col]    } else {
+    cell.textConstent = "x";
+    cell.classList.add("x");
+    cells[row][col] = -1;
+}
 }
 
 // ゲームの状態を確認
