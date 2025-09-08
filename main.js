@@ -20,9 +20,11 @@ for (let row = 0; row < 3; row++) {
             if (result !== CONTINUE) {
                 window.location.reload(true); // 決着がついた後にクリックしたらリロード
             }
+            if (cells[row][col === 0]){
             putMark(row, col); // ○か×を置く
             turn = turn * -1;
             check(); // ゲームの状態を確認
+            }
         });
     }
 }
