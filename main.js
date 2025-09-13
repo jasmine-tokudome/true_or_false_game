@@ -45,7 +45,18 @@ function putMark(row, col) {
 
 // ゲームの状態を確認
 function check() {
-
+    result = judge(cells);
+    const message = document.querySelector("#message");
+    switch(result){
+        case WIN_PLAYER_1:
+            message.textContent = "oの勝ち!";
+        case WIN_PLAYER_2:
+            message.textContent = "xの勝ち!";
+            break;
+        case DRAW_GAME:
+            message.textContent = "引き分け!";
+            break;
+    }
 }
 
 // 勝敗を判定する処理
