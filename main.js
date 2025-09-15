@@ -93,3 +93,13 @@ function judge(_cells) {
     }
     return DRQW_GAME;
 }
+
+function thinkAI() {
+    const hand = think(cells, -1, 5)
+    if (hand){
+        const cell = document.querySelector(`#cell_${hand[0]}_${hand[1]}`);
+        cell.textContent = " x ";
+        cell.classList.add("x");
+        cell[hand[0]][hand[1]] = -1;
+    }
+}
