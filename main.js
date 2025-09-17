@@ -23,6 +23,8 @@ for (let row = 0; row < 3; row++) {
             if (cells[row][col] === 0){}
             putMark(row,col);
             turn = turn * -1;
+            thinkAI();
+            turn = turn * -1;
             check();
         }
         );
