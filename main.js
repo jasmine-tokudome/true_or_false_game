@@ -11,6 +11,7 @@ const cells = [
 ]
 let turn = 1;
 let result = CONTINUE;
+let mode = "hard";
 
 // セルをクリックしたときのイベントを登録
 for (let row = 0; row < 3; row++) {
@@ -29,6 +30,14 @@ for (let row = 0; row < 3; row++) {
         }
         );
     }
+}
+
+// モードが切り替わった時の処理
+const modeElements = document.querySelectorAll("input[name='mode']");
+for (let modeElement of modeElements){
+    modeElement.addEventListener("change",(event) => {
+        mode = event.target.value;
+    });
 }
 
 // ○か×を置く
