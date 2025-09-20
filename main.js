@@ -105,7 +105,7 @@ function judge(_cells) {
             }
         }
     }
-    return DRQW_GAME;
+    return DRAW_GAME;
 }
 
 function thinkAI() {
