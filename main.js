@@ -37,6 +37,7 @@ const modeElements = document.querySelectorAll("input[name='mode']");
 for (let modeElement of modeElements){
     modeElement.addEventListener("change",(event) => {
         mode = event.target.value;
+        document.querySelector("#back").classlist = mode;
     });
 }
 
