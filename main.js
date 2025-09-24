@@ -32,12 +32,21 @@ for (let row = 0; row < 3; row++) {
     }
 }
 
+// 全セルが0かどうか判定する関数
+function isAllZero(cells) {
+    return cells.flat().every(value => value === 0);
+}
+
 // モードが切り替わった時の処理
 const modeElements = document.querySelectorAll("input[name='mode']");
 for (let modeElement of modeElements){
     modeElement.addEventListener("change",(event) => {
-        mode = event.target.value;
-        document.querySelector("#back").classList = mode;
+        if (isAllZero(cells)) {
+            mode = event.target.value;
+            document.querySelector("#back").classList = mode;
+        } else {
+            message.textContent = "ゲーム開始後はモード変更できません";
+        }
     });
 }
 
