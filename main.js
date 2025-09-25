@@ -39,13 +39,16 @@ function isAllZero(cells) {
 
 // モードが切り替わった時の処理
 const modeElements = document.querySelectorAll("input[name='mode']");
+let previousMode = document.querySelector("input[name='mode']:checked").value;
 for (let modeElement of modeElements){
     modeElement.addEventListener("change",(event) => {
         if (isAllZero(cells)) {
             mode = event.target.value;
+            previousMode = mode;
             document.querySelector("#back").classList = mode;
         } else {
             message.textContent = "ゲーム開始後はモード変更できません";
+            document.querySelector(`input[name='mode'][value='${previousMode}']`).checked = true;
         }
     });
 }
